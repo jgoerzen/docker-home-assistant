@@ -12,5 +12,12 @@ RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     /usr/local/bin/docker-wipelogs && \
     mv /usr/sbin/policy-rc.d /usr/sbin/policy-rc.d.disabled
 
-RUN adduser 
-    mkdir inst
+COPY setup/ /tmp/setup
+
+# FIXME: consolidate these later
+RUN /tmp/setup/setup.sh 0.63.1.tar.gz 450f510083a6c6fa4ccd6859f809b4ad75ce721931018be9c0088ae354305105
+RUN /tmp/setup/setup-hass.sh
+RUN rm -r /tmp/setup
+
+
+
