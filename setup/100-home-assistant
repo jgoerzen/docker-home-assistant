@@ -17,3 +17,8 @@ pip3 install /usr/src/app
 adduser --uid 2020 --disabled-password --gecos "Home Assistant" hass
 chown -R hass:hass /config
 
+cp -a /usr/local/debian-base-setup/files/init.d-hass /etc/init.d/hass
+cp -a /usr/local/debian-base-setup/files/logrotate-hass /etc/logrotate.d/hass
+update-rc.d hass defaults
+
+/etc/init.d/hass install

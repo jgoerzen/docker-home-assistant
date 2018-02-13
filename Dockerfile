@@ -10,7 +10,7 @@ COPY --from=debian-addons /usr/local/debian-base-setup/ /usr/local/debian-base-s
 RUN run-parts --exit-on-error --verbose /usr/local/debian-base-setup
 
 COPY setup/ /usr/local/debian-base-setup/
+COPY files/ /usr/local/debian-base-setup/files/
 RUN /usr/local/debian-base-setup/100-home-assistant
-
 
 CMD ["/usr/local/bin/boot-debian-base"]
