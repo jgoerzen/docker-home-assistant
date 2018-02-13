@@ -6,6 +6,7 @@ RUN mv /usr/sbin/policy-rc.d.disabled /usr/sbin/policy-rc.d && \
     apt-get -y -u dist-upgrade && \
     apt-get -y --no-install-recommends install \
        python3-venv python3-pip ffmpeg openalpr \
+       python3-cython python3-mysqldb python3-psycopg2 \
        tox nodejs \
        nmap net-tools bluetooth libsodium13 && \
     apt-get clean && rm -rf /tmp/setup /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
