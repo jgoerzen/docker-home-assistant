@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+set -x
+
+# Have to do this because the upstream module calls
+# config a VOLUME, which sets its perms to root:root no matter what you try.
+
+chown -R hass:hass /config
+rm "$0"
+
