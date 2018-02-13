@@ -14,7 +14,7 @@ PRE_EXEC=""
 # Typically /usr/bin/hass
 HASS_BIN="/usr/local/bin/hass"
 RUN_AS="hass"
-PID_DIR="/var/run"
+PID_DIR="/var/run/hass"
 PID_FILE="$PID_DIR/hass.pid"
 CONFIG_DIR="/config"
 LOG_DIR="/var/log/homeassistant"

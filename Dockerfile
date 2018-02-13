@@ -12,5 +12,6 @@ RUN run-parts --exit-on-error --verbose /usr/local/debian-base-setup
 COPY setup/ /usr/local/debian-base-setup/
 COPY files/ /usr/local/debian-base-setup/files/
 RUN /usr/local/debian-base-setup/100-home-assistant
+COPY preinit/ /usr/local/preinit/
 
 CMD ["/usr/local/bin/boot-debian-base"]
