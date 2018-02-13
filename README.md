@@ -5,10 +5,22 @@ This is a home-assistant image for Docker.  Compared to the
 this image:
 
  - Will get automatic security updates to base OS components
- - Is much smaller
+   (though not all the additional components home-assistant installs)
  - Has proper support for certbot for free Let's Encrypt SSL
    certificates, thanks to its proper support for cron
- - Properly installs the hass tool
+ - Properly installs the hass tool (to /usr/local/bin)
+ - Runs as the hass user instead of root
+ 
+This is a
+[docker-debian-base](https://github.com/jgoerzen/docker-debian-base)
+image.  Please see the important instructions at the
+docker-debian-base homepage for information on proper
+`docker run` paramaters.  The timezone can be set through this system.
+
+The
+[home-assistant.io docker installation instructions](https://home-assistant.io/docs/installation/docker/)
+mostly still apply as well.  One other difference is that logging will
+be to /var/log/homeassistant instead of to /config and stdout.
  
 # Copyright
 
