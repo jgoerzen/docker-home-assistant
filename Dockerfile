@@ -1,6 +1,6 @@
-FROM jgoerzen/debian-base-security:jessie AS debian-addons
+FROM jgoerzen/debian-base-security:stretch AS debian-addons
 
-FROM homeassistant/home-assistant
+FROM homeassistant/home-assistant:0.91.0
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 
 COPY --from=debian-addons /usr/local/preinit/ /usr/local/preinit/
